@@ -18,13 +18,12 @@ ButtonStyle _buttonStyle(
   EdgeInsetsGeometry? padding,
 }) {
   return TextButton.styleFrom(
-    padding: padding ?? const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
+    foregroundColor: Colors.white, padding: padding ?? const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
     minimumSize: Size.zero,
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(999999),
     ),
     backgroundColor: Theme.of(context).primaryColor,
-    primary: Colors.white,
     tapTargetSize: MaterialTapTargetSize.shrinkWrap,
   );
 }
@@ -116,7 +115,7 @@ class DioPluggableState extends State<DioInspector> {
     return Material(
       color: Colors.black26,
       child: DefaultTextStyle.merge(
-        style: Theme.of(context).textTheme.bodyText2,
+        style: Theme.of(context).textTheme.bodyMedium,
         child: Align(
           alignment: Alignment.bottomCenter,
           child: Container(
@@ -139,7 +138,7 @@ class DioPluggableState extends State<DioInspector> {
                       const Spacer(),
                       Text(
                         'Dio Requests',
-                        style: Theme.of(context).textTheme.subtitle1,
+                        style: Theme.of(context).textTheme.titleMedium,
                       ),
                       Expanded(
                         child: Align(
